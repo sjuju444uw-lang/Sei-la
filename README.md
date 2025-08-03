@@ -1,22 +1,21 @@
+-- Farm automático de pushup, situp e punch
+-- Insira em um LocalScript
+
 local player = game.Players.LocalPlayer
 
-
-local forcaEvent = game.ReplicatedStorage:FindFirstChild("Forca")
-local durabilidadeEvent = game.ReplicatedStorage:FindFirstChild("Durabilidade")
-local resistenciaEvent = game.ReplicatedStorage:FindFirstChild("Resistencia")
+local pushupEvent = game.ReplicatedStorage:FindFirstChild("pushup")
+local situpEvent = game.ReplicatedStorage:FindFirstChild("situp")
+local punchEvent = game.ReplicatedStorage:FindFirstChild("punch")
 
 while true do
-    -- Força
-    if forcaEvent then
-        forcaEvent:FireServer()
+    if pushupEvent then
+        pushupEvent:FireServer()
     end
-    -- Durabilidade
-    if durabilidadeEvent then
-        durabilidadeEvent:FireServer()
+    if situpEvent then
+        situpEvent:FireServer()
     end
-    -- Resistência
-    if resistenciaEvent then
-        resistenciaEvent:FireServer()
+    if punchEvent then
+        punchEvent:FireServer()
     end
-    wait() -- Farma o mais rápido possível (sem delay)
+    wait()
 end
